@@ -13,7 +13,9 @@ limit value or DNE
 
 const calc = (func, x) => {
 
-    console.log("Calculating...")
+    $("#result").html("Calculating <b>lim_{x -> " + x + "} " + func + "</b>...");
+
+    // calculate
 
 }
 
@@ -22,7 +24,7 @@ $("#calc").click(() => {
     const x = $("#limit-x").val();
     const f = $("#limit-f").val();
 
-    calc(f, x)
+    calc(f.replace(/\s+/g, ' '), x);
 
 });
 
