@@ -49,7 +49,7 @@ const evaluate = (func, c) => {
         s2 = limR;
 
     if (s1 == s2)
-        $("#result").html(msg + s1);
+        $("#result").html(msg + "<h1>" + s1 + "</h1>");
 
     else $("#result").html(msg + "DNE");
 
