@@ -30,7 +30,17 @@
     </nav>
     <main>
         <h1>Limits</h1>
-        <p>Coming soon!</p>
+        <form>
+            <div>X Approaches:</div> 
+            <input type="text" name="x" placeholder="Example: 3.5" id="limit-x">
+            <div>Function of X: </div>
+            <input type="text" name="function" placeholder="Example: 3(x^2)-2" id="limit-f">
+            <button id="calc" type="button">Calculate</button>
+            <div id="result"></div>
+        </form>
+        <div class="note" style="padding:1em 2em;display:block;margin:2% auto;max-width:50%;">
+            NOTE: Leave out all spaces in your function and be sure to use parenthesis to avoid misconceptions.
+        </div>
     </main>
     <footer>
         <div class="foot-item">
@@ -53,5 +63,6 @@
         </div>
     </footer>
     <script type="text/javascript"></script>
+    <script type="text/javascript" src="./../js/limits.js"></script>
 </body>
 </html>
