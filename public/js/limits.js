@@ -40,7 +40,7 @@ const evaluate = (func, c) => {
     $("#result").html(msg);
     
     const s1 = f(func, c);
-    const s2 = "DNE";
+    var s2 = "DNE";
 
     limR = Math.round(f(func, c + 0.01));
     limL = Math.round(f(func, c - 0.01));
