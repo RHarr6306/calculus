@@ -2,29 +2,65 @@
 
 /*
 
-__input__
-x => ?
-f(x) = ?
+    __Input__
+    x => ?
+    f(x) = ?
 
-__output__
-limit value or DNE
-
+    __Output__
+    limit value or DNE
+    
+    __Steps__
+    1. f(x) is defined at c
+    2. the limit exists at f(c)
+    3. f(c) = lim_[x->c]f(c)
+    
 */
 
-const calc = (func, x) => {
+const f = (func, x) => {
 
-    $("#result").html("Calculating <b>lim_{x -> " + x + "} " + func + "</b>...");
 
-    // calculate
+    func = func.replace(/\^/g, "**");
+    func = func.replace(/\(/g, "*(");
+    func = func.replace(/\/\*\(/g, "/\(");
+    func = func.replace(/x/g, String(x));
+    // cleanup? 
+    // More replaces functions may be needed.
+
+    if (eval(func))
+        return eval(func);
+    
+    else return "DNE";
+
+}
+
+
+const evaluate = (func, c) => {
+
+    msg = "Calculating <b>lim_[x -> " + c + "] " + func + "</b>... ";
+    $("#result").html(msg);
+    
+    const s1 = f(func, c);
+    const s2 = "DNE";
+
+    limR = Math.round(f(func, c + 0.01));
+    limL = Math.round(f(func, c - 0.01));
+
+    if (limR === limL)
+        s2 = limR;
+
+    if (s1 == s2)
+        $("#result").html(msg + s1);
+
+    else $("#result").html(msg + "DNE");
 
 }
 
 $("#calc").click(() => {
 
-    const x = $("#limit-x").val();
+    const c = parseFloat($("#limit-x").val());
     const f = $("#limit-f").val();
 
-    calc(f.replace(/\s+/g, ' '), x);
+    evaluate(f.replace(/\s+/g, ' '), c);
 
 });
 
