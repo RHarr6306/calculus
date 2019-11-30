@@ -24,7 +24,7 @@ const f = (func, x) => {
     func = func.replace(/\/\*\(/g, "/\(");
     func = func.replace(/x/g, String(x));
     // cleanup? 
-    // More replaces functions may be needed.
+    // More replace functions may be needed.
 
     if (eval(func))
         return eval(func);
