@@ -23,6 +23,10 @@ const f = (func, x) => {
     func = func.replace(/\(/g, "*(");
     func = func.replace(/\/\*\(/g, "/\(");
     func = func.replace(/x/g, String(x));
+    func = func.replace(/cos\(x\)/g, Math.cos(x));
+    func = func.replace(/sin(x)/g, Math.sin(x));
+    func = func.replace(/tan(x)/g, Math.tan(x));
+    // Support added for trigonometric functions except inverse trigonometric functions.
     // cleanup? 
     // More replaces functions may be needed.
 
