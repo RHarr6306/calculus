@@ -144,11 +144,14 @@ input {
     margin: 0; } }
 
 footer {
+  width: 100%;
   font-family: 'Roboto Mono', monospace;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
-  background-color: #212429; }
+  background-color: #212429;
+  position: absolute;
+  bottom: 0; }
 
 .foot-link {
   text-decoration: none;
