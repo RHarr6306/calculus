@@ -90,6 +90,11 @@ nav, #nav-link-wrap {
     object-fit: contain;
 }
 
+#result {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
 form {
     display: block;
     margin: 0 auto;
