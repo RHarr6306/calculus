@@ -11,18 +11,50 @@ slope & f'(x)
 
 */
 
-// limit calculator
 
-/*
+const replacements = [
+    ["^", "**"], 
+    ["sin(", "Math.sin("], 
+    ["cos(", "Math.cos("],
+    ["tan(", "Math.tan("],
+    ["arcsin(", "Math.asin("],
+    ["arccos(", "Math.acos("], 
+    ["arctan(", "Math.atan("]
+]
 
-    __Input__
-    x => ?
-    f(x) = ?
-
-    __Output__
-    limit value or DNE
+const f = (func, x) => {
     
-    __Steps__
-    f'(x) = lim_[dx -> c] (f(c + dx) - f(c))/dx
+
+    for (l in replacements) {
+        func = func.replace(replacements[l][0], replacements[l][1]);
+    }
+
+    func = func.replace(/x/g, String(x));    
+    return eval(func);
+
+}
+
+const lim = (func, c) => {
+
+
+    const s1 = f(func, c);
+    var s2 = "DNE";
+    limR = Math.round(f(func, c + 0.0001));
+    limL = Math.round(f(func, c - 0.0001));
     
-*/
+    if (limR == limL)
+        s2 = limR;
+    
+    if (s1 == s2)
+        return `${msg}<h1>${s1}</h1>`;
+    
+    else return `${msg}<h1>DNE</h1>`;
+
+}
+
+$("#calc").click(() => {
+    
+    // handle derivative
+
+});
+
