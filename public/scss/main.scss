@@ -13,6 +13,7 @@ $foot-col: $nav-col;
 html, body {
     background-color: $bg-col;
     margin: 0px;
+    overflow: hidden;
 }
 
 main {
