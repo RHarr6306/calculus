@@ -47,6 +47,9 @@ nav, #nav-link-wrap {
   margin: 2% auto;
   max-width: 50%; }
 
+.note > div {
+  margin: 5px 10px; }
+
 .main-link {
   text-decoration: none;
   color: #004fe0; }
