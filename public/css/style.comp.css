@@ -38,6 +38,7 @@ nav, #nav-link-wrap {
   line-height: 2em; }
 
 .note {
+  border: 1px solid #c8c8c8;
   border-left: 4px solid #ff4343;
   border-radius: 5px;
   background-color: #f0f0f0;
@@ -76,6 +77,7 @@ form {
   margin: 0 auto;
   background-color: #f0f0f0;
   padding: 2em 4em;
+  border: 1px solid #c8c8c8;
   border-radius: 10px;
   width: 50%;
   line-height: 2em;
@@ -89,7 +91,7 @@ form > div {
 
 input {
   width: 50%;
-  border: 0px;
+  border: 1px solid #c8c8c8;
   height: auto;
   padding: 2px 4px;
   margin-right: 2em;

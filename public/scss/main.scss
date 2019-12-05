@@ -57,6 +57,7 @@ nav, #nav-link-wrap {
 }
 
 .note {
+    border: 1px solid rgb(200, 200, 200);
     border-left: 4px solid $red;
     border-radius: 5px;
     background-color: $white;
@@ -102,6 +103,7 @@ form {
     margin: 0 auto;
     background-color: rgb(240, 240, 240);
     padding: 2em 4em;
+    border: 1px solid rgb(200, 200, 200);
     border-radius: 10px;
     width: 50%;
     line-height: 2em;
@@ -117,7 +119,7 @@ form > div {
 
 input {
     width: 50%;
-    border: 0px;
+    border: 1px solid rgb(200, 200, 200);
     height: auto;
     padding: 2px 4px;
     margin-right: 2em;
