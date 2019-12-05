@@ -7,7 +7,6 @@
     
 */
 
-
 const replacements = [
     ["^", "**"], 
     ["sin(", "Math.sin("], 
@@ -33,14 +32,9 @@ const f = (func, x) => {
 
 }
 
-$("#calc").click(() => {
-    
-    const c = parseFloat($("#limit-x").val());
-    const func = $("#limit-f").val();
-    
-    msg = `Calculating <b>lim_[x -> ${c}] ${func}</b>... `;
-    $("#result").html(msg);
-    
+const lim = (func, c) => {
+
+
     const s1 = f(func, c);
     var s2 = "DNE";
     limR = Math.round(f(func, c + 0.0001));
@@ -50,9 +44,21 @@ $("#calc").click(() => {
         s2 = limR;
     
     if (s1 == s2)
-        $("#result").html(`${msg}<h1>${s1}</h1>`);
+        return `${msg}<h1>${s1}</h1>`;
     
-    else $("#result").html(`${msg}<h1>DNE</h1>`);
+    else return `${msg}<h1>DNE</h1>`;
+
+}
+
+$("#calc").click(() => {
+    
+    const c = parseFloat($("#limit-x").val());
+    const func = $("#limit-f").val();
+    
+    msg = `Calculating <b>lim_[x -> ${c}] ${func}</b>... `;
+    $("#result").html(msg);
+    
+    $("#result").html(lim(func, c));
 
 });
 
