@@ -13,6 +13,12 @@ npm run compile-sass
 npm run start
 ```
 
+### Development
+```
+npm run compile-sass
+npm run start
+```
+
 ### Features
 
 * Calculator Programs
@@ -34,4 +40,5 @@ npm run start
 
 * [Le-SirH](https://github.com/Le-SirH)
 * [Dapp3rDuck](https://github.com/Dapp3rDuck)
-
+* [RHarr6306](https://github.com/RHarr6306)
+* [rwait8831](https://github.com/rwait8831)
