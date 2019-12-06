@@ -83,9 +83,14 @@ form {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   grid-row-gap: 2em; }
+<<<<<<< HEAD
+  form div {
+    margin-left: 2em; }
+=======
 
 form > div {
   text-align: center; }
+>>>>>>> 4d50b16726be49eac4778920bd7fc5ea6624db98
 
 input {
   width: 90%;
@@ -94,6 +99,32 @@ input {
   padding: 2px 4px;
   margin-right: 2em;
   margin-left: auto; }
+
+footer {
+  font-family: 'Roboto Mono', monospace;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  background-color: #212429; }
+
+.foot-link {
+  text-decoration: none;
+  color: white;
+  padding: 1.25em 2.5em;
+  display: block;
+  margin: 0 auto;
+  text-align: center; }
+
+.foot-link:hover {
+  color: #e6e6e6; }
+
+.tutorial {
+  line-height: 2em;
+  padding: 2em 4em;
+  width: 60%;
+  margin: 0 auto; }
+  .tutorial h2 {
+    text-align: center; }
 
 #calc {
   grid-column: 1 / 4;
@@ -111,18 +142,24 @@ input {
 #calc:hover {
   animation: calc-hover 0.2s forwards; }
 
+#calc:active {
+  color: #e1e1e1; }
+
 @keyframes calc-hover {
   to {
     background-color: #0087ff;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
     transform: scale(1.05); } }
 
+<<<<<<< HEAD
+=======
 #calc:active {
   color: #e1e1e1; }
 
 .underline {
   text-decoration: underline; }
 
+>>>>>>> 4d50b16726be49eac4778920bd7fc5ea6624db98
 @media screen and (max-width: 900px) {
   .main-wrap {
     flex-direction: column; }
@@ -154,6 +191,9 @@ input {
     width: 100%;
     margin-left: auto; }
   form > div {
+<<<<<<< HEAD
+    margin: 0; } }
+=======
     margin: 0; }
   .collapsed {
     display: none !important; }
@@ -187,3 +227,4 @@ footer {
 
 .foot-link:hover {
   color: #e6e6e6; }
+>>>>>>> 4d50b16726be49eac4778920bd7fc5ea6624db98

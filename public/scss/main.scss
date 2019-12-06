@@ -97,6 +97,7 @@ nav, #nav-link-wrap {
 }
 
 form {
+    
     display: block;
     margin: 0 auto;
     background-color: rgb(240, 240, 240);
@@ -109,10 +110,11 @@ form {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-row-gap: 2em;
-}
+    
+    div {
+        margin-left: 2em;
+    }
 
-form > div {
-    text-align: center;
 }
 
 input {
@@ -122,6 +124,39 @@ input {
     padding: 2px 4px;
     margin-right: 2em;
     margin-left: auto;
+}
+
+footer {
+    font-family: 'Roboto Mono', monospace;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    background-color: $foot-col;
+}
+
+.foot-link {
+    text-decoration: none;
+    color: $link-col;
+    padding: 1.25em 2.5em;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.foot-link:hover {
+    color: darken($link-col, 10%);
+}
+
+.tutorial {
+    line-height: 2em;
+    padding: 2em 4em;
+    width: 60%;
+    margin: 0 auto;
+    
+    h2 {
+        text-align: center;
+    }
+
 }
 
 #calc {
@@ -137,23 +172,23 @@ input {
     border: 0px;
     border-radius: 5px;
     letter-spacing: 1px;
-}
+}    
 
 #calc:hover {
     animation: calc-hover 0.2s forwards;
-}
+}    
+
+#calc:active {
+    color: rgb(225, 225, 225);
+}    
 
 @keyframes calc-hover {
     to {
         background-color: rgb(0, 135, 255);
         box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
         transform: scale(1.05);
-    }
-}
-
-#calc:active {
-    color: rgb(225, 225, 225);
-}
+    }    
+}        
 
 .underline {
     text-decoration: underline;
@@ -163,33 +198,33 @@ input {
 
     .main-wrap {
         flex-direction: column;
-    }
+    }    
 
     #integration-img {
         width: 75%;
         display: block;
         margin: 0 auto;
-    }
+    }    
 
     nav, #nav-link-wrap {
         flex-direction: column; 
-    }
+    }    
     
     #nav-title {
         display: block;
         margin: 0 auto;
-    }
+    }    
 
     #nav-link-wrap {
         position: relative !important;
         width: 100%;
         right: 0px;
-    }
+    }    
 
     .nav-item {
         display: block;
         margin: 0 auto;
-    }
+    }    
 
     form {
         grid-template-columns: 1fr 1fr !important;
@@ -210,55 +245,11 @@ input {
     input {
         width: 100%;
         margin-left: auto;
-    }
+    }    
 
     form > div {
         margin: 0;
-    }
+    }    
 
-    .collapsed {
-        display: none !important;
-    }
-
-    .uncollapsed {
-        animation: mobile-nav 1s forwards;
-    }
-
-}
-
-@keyframes mobile-nav {
-    
-    0% {
-        transform: ScaleY(0);
-        height: 0px;
-    }
-    100% {
-        transform: ScaleY(1);
-        transform-origin: top;
-        height: 6.5 * 50px;
-    }
-
-}
-
-footer {
-    width: 100%;
-    font-family: 'Rubik', sans-serif;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-    background-color: $foot-col;
-}
-
-.foot-link {
-    text-decoration: none;
-    color: $link-col;
-    padding: 1.25em 2.5em;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.foot-link:hover {
-    color: darken($link-col, 10%);
-}
+}    
 
