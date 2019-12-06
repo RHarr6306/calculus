@@ -113,8 +113,10 @@ form {
     
     div {
         margin-left: 2em;
+        margin: 0; 
     }
 
+    
 }
 
 input {
@@ -166,7 +168,7 @@ footer {
     font-size: 100%;
     display: block;
     margin: 0 auto;
-
+    
     background-color: rgb(0, 120, 255);
     color: white;
     border: 0px;
@@ -195,17 +197,17 @@ footer {
 }
 
 @media screen and (max-width: 900px) {
-
+    
     .main-wrap {
         flex-direction: column;
     }    
-
+    
     #integration-img {
         width: 75%;
         display: block;
         margin: 0 auto;
     }    
-
+    
     nav, #nav-link-wrap {
         flex-direction: column; 
     }    
@@ -214,42 +216,64 @@ footer {
         display: block;
         margin: 0 auto;
     }    
-
+    
     #nav-link-wrap {
         position: relative !important;
         width: 100%;
         right: 0px;
     }    
-
+    
     .nav-item {
         display: block;
         margin: 0 auto;
     }    
-
+    
     form {
         grid-template-columns: 1fr 1fr !important;
     }
-
+    
     form > .example {
         display: none;
     }
-
+    
     form > input {
         grid-column: 2 / 3;
     }
-
+    
     form > div {
         grid-column: 1 / 2;
     }
-
+    
     input {
         width: 100%;
         margin-left: auto;
     }    
-
+    
     form > div {
         margin: 0;
     }    
+    
+    .collapsed {
+        display: none !important; 
+    }
+    
+    .uncollapsed {
+        animation: mobile-nav 1s forwards; 
+    } 
+    
+}
 
-}    
+@keyframes mobile-nav {
 
+    0% {
+        transform: ScaleY(0);
+        height: 0px; 
+    }
+
+    100% {
+        transform: ScaleY(1);
+        transform-origin: top;
+        height: 325px; 
+    } 
+
+}
