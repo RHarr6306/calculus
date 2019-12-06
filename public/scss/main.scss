@@ -216,6 +216,28 @@ input {
         margin: 0;
     }
 
+    .collapsed {
+        display: none !important;
+    }
+
+    .uncollapsed {
+        animation: mobile-nav 1s forwards;
+    }
+
+}
+
+@keyframes mobile-nav {
+    
+    0% {
+        transform: ScaleY(0);
+        height: 0px;
+    }
+    100% {
+        transform: ScaleY(1);
+        transform-origin: top;
+        height: 6.5 * 50px;
+    }
+
 }
 
 footer {
@@ -239,3 +261,4 @@ footer {
 .foot-link:hover {
     color: darken($link-col, 10%);
 }
+

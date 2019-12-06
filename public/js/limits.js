@@ -21,13 +21,12 @@ const replacements = [
 // csc(x), cot(x), arcsec(x), etc.
 
 const f = (func, x) => {
-    
 
     for (l in replacements) {
         func = func.replace(replacements[l][0], replacements[l][1]);
     }
 
-    func = func.replace(/x/g, String(x));    
+    func = func.replace(/x/g, String(x));
     return eval(func);
 
 }
