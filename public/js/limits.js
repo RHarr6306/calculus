@@ -44,9 +44,9 @@ const lim = (func, c, side=0) => {
     
     else if (limR == limL) 
         s2 = limR;
-
+  
     return (s1 == s2) ? `${msg}<h1>${s1}</h1>` : `${msg}<h1>DNE</h1>`;
-        
+   
 }
 
 $("#calc").click(() => {
