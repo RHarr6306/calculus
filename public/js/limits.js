@@ -31,21 +31,20 @@ const f = (func, x) => {
 
 }
 
-const lim = (func, c, side=0) => {
+const lim = (func, c, side=false) => {
 
     const s1 = f(func, c);
-    var s2 = "DNE";
 
     limR = Math.round(f(func, c + 0.000001) * 100) / 100;
     limL = Math.round(f(func, c - 0.000001) * 100) / 100;
 
     if (side)
-        return (side == "right") ? limR : limL;
-    
-    else if (limR == limL) 
-        s2 = limR;
-  
-    return (s1 == s2) ? `${msg}<h1>${s1}</h1>` : `${msg}<h1>DNE</h1>`;
+        return `${msg}<h1>${(side == 'right') ? limR : limL}</h1>`;
+
+    else if (limR == limL)
+        return `${msg}<h1>${(s1 == limR) ? s1 : 'DNE'}</h1`;
+
+    else return `${msg}<h1>DNE</h1`
    
 }
 
@@ -53,11 +52,16 @@ $("#calc").click(() => {
     
     const c = parseFloat($("#limit-x").val());
     const func = $("#limit-f").val();
-    
+    const right = ($("input[type=radio]#right").is(":checked")) ? 'right' : false;
+    const left = ($("input[type=radio]#left").is(":checked")) ? 'left' : false;
+
     msg = `Calculating <b>lim_[x -> ${c}] ${func}</b>... `;
     $("#result").html(msg);
     
-    $("#result").html(lim(func, c));
+    if (right || left)
+        $("#result").html(lim(func, c, (right) ? 'right' : 'left'));
+    
+    else $("#result").html(lim(func, c));
 
 });
 

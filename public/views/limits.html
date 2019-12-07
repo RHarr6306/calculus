@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="./../../css/style.comp.css">
+    <link rel="icon" href="./../assets/icon.png">
     <title>Calculus</title>
 </head>
 <body>
     <nav>
         <div id="nav-title">
-            <a href="https://github.com/Le-SirH/calculus/" id="nav-title-link" class="nav-link">Calculus</a>
+            <a id="nav-title-link" class="nav-link">Calculus</a>
         </div>
         <div id="nav-link-wrap" class="collapsed">
             <div class="nav-item">
@@ -41,9 +42,16 @@
         <form>
             <div>Limit Type:</div>
             <div id="radio">
-                <input type="radio" name="limit-type" id="right"><div>Right</div>
-                <input type="radio" name="limit-type" id="left"><div>Left</div>
-                <input type="radio" name="limit-type" id="both"><div>Both</div>
+                <label>
+                    Left<input type="radio" id="right" name="limit-type">
+                </label>
+                <label>
+                    Right<input type="radio" id="left" name="limit-type">
+                </label>
+                <label>
+                    Both<input type="radio" id="both" name="limit-type">
+                </label>
+
             </div>
             <div class="example">lim_[x -> c^<b class="underline">+</b>](f(x))</div>
             <div>X Approaches:</div> 
@@ -55,7 +63,7 @@
             <button id="calc" type="button">Calculate</button>
             <div id="result"></div>
         </form>
-        <div class="note" style="padding:1em 2em;display:block;margin:2% auto;max-width:50%;">
+        <div class="note">
             <h4 style="margin:8px 0px;text-decoration:underline;">Note</h4>
             <div>
                 Use <b>*</b> for multiplication. 
