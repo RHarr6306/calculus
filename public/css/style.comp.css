@@ -63,7 +63,7 @@ nav, #nav-link-wrap {
   color: #003eb3; }
 
 #integration-img {
-  width: 25%;
+  width: 33%;
   object-fit: contain; }
 
 #result {
@@ -153,7 +153,7 @@ footer {
   .main-wrap {
     flex-direction: column; }
   #integration-img {
-    width: 75%;
+    width: 66%;
     display: block;
     margin: 0 auto; }
   nav, #nav-link-wrap {
