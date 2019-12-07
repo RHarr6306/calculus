@@ -2,19 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=0.7, maximum-scale=1.0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./../css/style.comp.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./../../css/style.comp.css">
+    <link rel="icon" href="./../assets/icon.png">
     <title>Calculus</title>
 </head>
-<!--PGP Test :D-->
 <body>
     <nav>
         <div id="nav-title">
-            <a class="nav-link" href="/">Calculus</a>
+            <a id="nav-title-link" class="nav-link">Calculus</a>
         </div>
-        <div id="nav-link-wrap">
+        <div id="nav-link-wrap" class="collapsed">
+            <div class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </div>
             <div class="nav-item">
                 <a class="nav-link" href="/limits">Limits</a>
             </div>
@@ -31,6 +38,19 @@
     </nav>
     <main>
         <h1>Programs</h1>
+        <hr><br>
+        <h2>Installation</h2>
+        <ol>
+            <li>Make sure you have a calculator that is compatible with downloading programs. A TI-83 and above should be fine.</li>
+            <li>Click on a link to download a program.</li>
+            <li>If the program has a <b>.py</b> extension, you may run it from there by double clicking the program.</li>
+            <li>If it is a calculator program, make sure your calculator is plugged in to your computer.</li>
+            <li>
+                Download the 
+                <a class="main-link" href="https://education.ti.com/en/products/computer-software/ti-connect-ce-sw">TI Connect CE Software</a> 
+                and follow their steps to receive the program on your calculator.
+            </li>
+        </ol>
         <h2>TI Basic</h2>
         <p>(You will need <a class="main-link" href="https://education.ti.com/en/products/computer-software/ti-connect-ce-sw">Ti-Connect CE</a> in order to install these programs.)</p>
         <h4>Formulas / Theorems</h4>
@@ -76,5 +96,7 @@
         </div>
     </footer>
     <script type="text/javascript"></script>
+    <script type="text/javascript" src="./../js/main.js"></script>
 </body>
 </html>
+
