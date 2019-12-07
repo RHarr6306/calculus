@@ -184,6 +184,10 @@ footer {
     color: rgb(225, 225, 225);
 }    
 
+.underline {
+    text-decoration: underline;
+}
+
 @keyframes calc-hover {
     to {
         background-color: rgb(0, 135, 255);
@@ -192,15 +196,11 @@ footer {
     }    
 }        
 
-.underline {
-    text-decoration: underline;
-}
-
 @media screen and (max-width: 900px) {
     
     .main-wrap {
         flex-direction: column;
-    }    
+    }
     
     #integration-img {
         width: 75%;
@@ -226,10 +226,16 @@ footer {
     .nav-item {
         display: block;
         margin: 0 auto;
-    }    
+    }
+
+    .note {
+        width: 75%;
+    }
     
     form {
+        width: 75%;
         grid-template-columns: 1fr 1fr !important;
+        padding: 1em 2em;
     }
     
     form > .example {

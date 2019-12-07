@@ -140,14 +140,14 @@ footer {
 #calc:active {
   color: #e1e1e1; }
 
+.underline {
+  text-decoration: underline; }
+
 @keyframes calc-hover {
   to {
     background-color: #0087ff;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
     transform: scale(1.05); } }
-
-.underline {
-  text-decoration: underline; }
 
 @media screen and (max-width: 900px) {
   .main-wrap {
@@ -168,8 +168,12 @@ footer {
   .nav-item {
     display: block;
     margin: 0 auto; }
+  .note {
+    width: 75%; }
   form {
-    grid-template-columns: 1fr 1fr !important; }
+    width: 75%;
+    grid-template-columns: 1fr 1fr !important;
+    padding: 1em 2em; }
   form > .example {
     display: none; }
   form > input {
