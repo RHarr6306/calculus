@@ -34,7 +34,6 @@ const f = (func, x) => {
 const lim = (func, c, side=false) => {
 
     const s1 = f(func, c);
-    var s2 = "DNE";
 
     limR = Math.round(f(func, c + 0.000001) * 100) / 100;
     limL = Math.round(f(func, c - 0.000001) * 100) / 100;
@@ -42,13 +41,10 @@ const lim = (func, c, side=false) => {
     if (side)
         return `${msg}<h1>${(side == 'right') ? limR : limL}</h1>`;
 
-    else if (limR == limL) {
+    else if (limR == limL)
+        return `${msg}<h1>${(s1 == limR) ? s1 : 'DNE'}</h1`;
 
-        s2 = limR;
-        return (s1 == s2) ? `${msg}<h1>${s1}</h1>` 
-            : `${msg}<h1>DNE</h1>`;
-    
-    }
+    else return `${msg}<h1>DNE</h1`
    
 }
 
