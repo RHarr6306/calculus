@@ -27,10 +27,6 @@ $ npm run start
 * Simple Derivative Calculator
 * Simple Integral Calculator
 
-### Prerequisites
-
-* [Node.js](https://nodejs.org/en/)
-
 ## Built With
 
 * [Node.js](https://nodejs.org/en/)
