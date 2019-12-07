@@ -23,9 +23,8 @@ $ npm run start
 ## Features
 
 * Calculator Programs
-* Simple Limit Calculator
-* Simple Derivative Calculator
-* Simple Integral Calculator
+* Simple Limit, Derivative, & Integral Calculators
+* Evaluation Tutorials
 
 ## Built With
 
