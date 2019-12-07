@@ -1,13 +1,14 @@
-
+@import "keyframes";
+@import "mobile";
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 
 $red: rgb(255, 67, 67);
 $white: rgb(240, 240, 240);
-$link-col: rgb(255, 255, 255);
-$bg-col: #ffffff;
-
+$nav-link-col: rgb(255, 255, 255);
 $nav-col: #212429;
+$bg-col: #ffffff;
 $foot-col: $nav-col;
+$link-col: rgb(0, 79, 224);
 
 html, body {
     background-color: $bg-col;
@@ -42,11 +43,11 @@ nav, #nav-link-wrap {
 
 .nav-link {
     text-decoration: none;
-    color: $link-col;
+    color: $nav-link-col;
 }
 
 .nav-link:hover {
-    color: darken($link-col, 10%);
+    color: darken($nav-link-col, 10%);
 }
 
 .indent {
@@ -73,7 +74,7 @@ nav, #nav-link-wrap {
 
 .main-link {
     text-decoration: none;
-    color: rgb(0, 79, 224);
+    color: $link-col;
 }
 
 .main-wrap {
@@ -115,7 +116,6 @@ form {
         margin-left: 2em;
         margin: 0; 
     }
-
     
 }
 
@@ -149,18 +149,6 @@ footer {
     color: darken($link-col, 10%);
 }
 
-.tutorial {
-    line-height: 2em;
-    padding: 2em 4em;
-    width: 60%;
-    margin: 0 auto;
-    
-    h2 {
-        text-align: center;
-    }
-
-}
-
 #calc {
     grid-column: 1 / 4;
     width: fit-content;
@@ -168,7 +156,6 @@ footer {
     font-size: 100%;
     display: block;
     margin: 0 auto;
-    
     background-color: rgb(0, 120, 255);
     color: white;
     border: 0px;
@@ -182,104 +169,21 @@ footer {
 
 #calc:active {
     color: rgb(225, 225, 225);
-}    
+}
 
 .underline {
     text-decoration: underline;
 }
-
-@keyframes calc-hover {
-    to {
-        background-color: rgb(0, 135, 255);
-        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-        transform: scale(1.05);
-    }    
-}        
-
-@media screen and (max-width: 900px) {
+.tutorial {
     
-    .main-wrap {
-        flex-direction: column;
-    }
+    line-height: 2em;
+    padding: 2em 4em;
+    width: 60%;
+    margin: 0 auto;
     
-    #integration-img {
-        width: 75%;
-        display: block;
-        margin: 0 auto;
-    }    
-    
-    nav, #nav-link-wrap {
-        flex-direction: column; 
-    }    
-    
-    #nav-title {
-        display: block;
-        margin: 0 auto;
-    }    
-    
-    #nav-link-wrap {
-        position: relative !important;
-        width: 100%;
-        right: 0px;
-    }    
-    
-    .nav-item {
-        display: block;
-        margin: 0 auto;
+    h2 {
+        text-align: center;
     }
 
-    .note {
-        width: 75%;
-    }
-    
-    form {
-        width: 75%;
-        grid-template-columns: 1fr 1fr !important;
-        padding: 1em 2em;
-    }
-    
-    form > .example {
-        display: none;
-    }
-    
-    form > input {
-        grid-column: 2 / 3;
-    }
-    
-    form > div {
-        grid-column: 1 / 2;
-    }
-    
-    input {
-        width: 100%;
-        margin-left: auto;
-    }    
-    
-    form > div {
-        margin: 0;
-    }    
-    
-    .collapsed {
-        display: none !important; 
-    }
-    
-    .uncollapsed {
-        animation: mobile-nav 1s forwards; 
-    } 
-    
 }
 
-@keyframes mobile-nav {
-
-    0% {
-        transform: ScaleY(0);
-        height: 0px; 
-    }
-
-    100% {
-        transform: ScaleY(1);
-        transform-origin: top;
-        height: 325px; 
-    } 
-
-}

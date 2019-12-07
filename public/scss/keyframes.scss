@@ -1,0 +1,23 @@
+
+@keyframes calc-hover {
+    to {
+        background-color: rgb(0, 135, 255);
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+    }    
+}        
+
+@keyframes mobile-nav {
+
+    0% {
+        transform: ScaleY(0);
+        height: 0px; 
+    }
+
+    100% {
+        transform: ScaleY(1);
+        transform-origin: top;
+        height: 325px; 
+    } 
+
+}
