@@ -14,5 +14,21 @@ $(document).ready(() => {
 
     });
 
+    $("#radio>label").click(function() {
+
+        $("#radio>label").css({
+            color: '#777777', 
+            fontWeight: 'normal'
+        });
+        $(this).css({
+            color: 'black', 
+            fontWeight: 'bold'
+        });
+        
+        $("#radio>label").prop('checked', true);
+        $(this).prop('checked', true);
+
+    });
+
 });
 
