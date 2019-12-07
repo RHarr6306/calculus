@@ -39,6 +39,13 @@
         <h1>Limits</h1>
         <hr><br>
         <form>
+            <div>Limit Type:</div>
+            <div id="radio">
+                <input type="radio" name="limit-type" id="right"><div>Right</div>
+                <input type="radio" name="limit-type" id="left"><div>Left</div>
+                <input type="radio" name="limit-type" id="both"><div>Both</div>
+            </div>
+            <div class="example">lim_[x -> c^<b class="underline">+</b>](f(x))</div>
             <div>X Approaches:</div> 
             <input type="text" name="x" placeholder="Example: 3.5" id="limit-x">
             <div class="example">lim_[x -> <b class="underline">c</b>](...)</div>
