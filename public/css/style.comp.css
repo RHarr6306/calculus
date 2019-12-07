@@ -1,58 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
-@keyframes calc-hover {
-  to {
-    background-color: #0087ff;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05); } }
-
-@keyframes mobile-nav {
-  0% {
-    transform: ScaleY(0);
-    height: 0px; }
-  100% {
-    transform: ScaleY(1);
-    transform-origin: top;
-    height: 325px; } }
-
-@media screen and (max-width: 900px) {
-  .main-wrap {
-    flex-direction: column; }
-  #integration-img {
-    width: 75%;
-    display: block;
-    margin: 0 auto; }
-  #nav-title {
-    display: block;
-    margin: 0 auto; }
-  #nav-link-wrap {
-    position: relative !important;
-    width: 100%;
-    right: 0px; }
-  .nav-item {
-    display: block;
-    margin: 0 auto; }
-  .note {
-    width: 75%; }
-  form {
-    width: 75%;
-    grid-template-columns: 1fr 1fr !important;
-    padding: 1em 2em; }
-  form > .example {
-    display: none; }
-  form > input {
-    grid-column: 2 / 3; }
-  form > div {
-    grid-column: 1 / 2; }
-  input {
-    width: 100%;
-    margin-left: auto; }
-  form > div {
-    margin: 0; }
-  .collapsed {
-    display: none !important; }
-  .uncollapsed {
-    animation: mobile-nav 0.5s forwards; } }
-
 html, body {
   background-color: #ffffff;
   margin: 0px; }
@@ -167,6 +113,14 @@ footer {
 .foot-link:hover {
   color: #e6e6e6; }
 
+.tutorial {
+  line-height: 2em;
+  padding: 2em 4em;
+  width: 60%;
+  margin: 0 auto; }
+  .tutorial h2 {
+    text-align: center; }
+
 #calc {
   grid-column: 1 / 4;
   width: fit-content;
@@ -189,10 +143,58 @@ footer {
 .underline {
   text-decoration: underline; }
 
-.tutorial {
-  line-height: 2em;
-  padding: 2em 4em;
-  width: 60%;
-  margin: 0 auto; }
-  .tutorial h2 {
-    text-align: center; }
+@keyframes calc-hover {
+  to {
+    background-color: #0087ff;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); } }
+
+@media screen and (max-width: 900px) {
+  .main-wrap {
+    flex-direction: column; }
+  #integration-img {
+    width: 75%;
+    display: block;
+    margin: 0 auto; }
+  nav, #nav-link-wrap {
+    flex-direction: column; }
+  #nav-title {
+    display: block;
+    margin: 0 auto; }
+  #nav-link-wrap {
+    position: relative !important;
+    width: 100%;
+    right: 0px; }
+  .nav-item {
+    display: block;
+    margin: 0 auto; }
+  .note {
+    width: 75%; }
+  form {
+    width: 75%;
+    grid-template-columns: 1fr 1fr !important;
+    padding: 1em 2em; }
+  form > .example {
+    display: none; }
+  form > input {
+    grid-column: 2 / 3; }
+  form > div {
+    grid-column: 1 / 2; }
+  input {
+    width: 100%;
+    margin-left: auto; }
+  form > div {
+    margin: 0; }
+  .collapsed {
+    display: none !important; }
+  .uncollapsed {
+    animation: mobile-nav 1s forwards; } }
+
+@keyframes mobile-nav {
+  0% {
+    transform: ScaleY(0);
+    height: 0px; }
+  100% {
+    transform: ScaleY(1);
+    transform-origin: top;
+    height: 325px; } }
