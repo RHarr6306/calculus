@@ -79,20 +79,20 @@ nav, #nav-link-wrap {
 }
 
 .main-link {
+    
     text-decoration: none;
     color: rgb(0, 79, 224);
-}
-
-.main-wrap {
-
-    display: flex;
-    flex-direction: row;
-    height: auto;
-
+    
     &:hover {
         color: rgb(0, 62, 179);
     }
 
+}
+
+.main-wrap {
+    display: flex;
+    flex-direction: row;
+    height: auto;
 }
 
 #integration-img {
