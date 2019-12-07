@@ -31,20 +31,22 @@ const f = (func, x) => {
 
 }
 
-const lim = (func, c) => {
-
+const lim = (func, c, side=0) => {
 
     const s1 = f(func, c);
     var s2 = "DNE";
 
     limR = Math.round(f(func, c + 0.000001) * 100) / 100;
     limL = Math.round(f(func, c - 0.000001) * 100) / 100;
+
+    if (side)
+        return (side == "right") ? limR : limL;
     
-    if (limR == limL) 
+    else if (limR == limL) 
         s2 = limR;
-        
+  
     return (s1 == s2) ? `${msg}<h1>${s1}</h1>` : `${msg}<h1>DNE</h1>`;
-        
+   
 }
 
 $("#calc").click(() => {
