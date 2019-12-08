@@ -1,9 +1,7 @@
-
-@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
 
 $red: rgb(255, 67, 67);
-$white: rgb(230, 230, 230);
+$white: rgb(240, 240, 240);
 $link-col: rgb(255, 255, 255);
 $bg-col: #ffffff;
 
@@ -21,10 +19,10 @@ main {
 }
 
 nav {
-    font-family: 'Roboto Mono', monospace;
-    padding: 0px 5%;
+    font-family: 'Rubik', sans-serif;
     background-color: $nav-col;
-    box-shadow: 0px 0px 25px black;
+    box-shadow: 0px 0px 10px black;
+    padding: 0px 5%;
 }
 
 nav, #nav-link-wrap {
@@ -42,8 +40,14 @@ nav, #nav-link-wrap {
 }
 
 .nav-link {
+
     text-decoration: none;
     color: $link-col;
+    
+    &:hover {
+        color: darken($link-col, 10%);
+    }
+
 }
 
 .indent {
@@ -52,64 +56,90 @@ nav, #nav-link-wrap {
 }
 
 .note {
-    border-left: 3px solid $red;
+    
+    border: 1px solid rgb(200, 200, 200);
+    border-left: 4px solid $red;
     border-radius: 5px;
     background-color: $white;
     padding: 0.5em 1em;
     width: fit-content;
+    padding: 1em 2em;
+    display: block;
+    margin: 2% auto;
+    max-width: 50%;
+    padding: 1em 2em;
+    display: block;
+    margin: 2% auto;
+    max-width: 50%;
+
+    div {
+        margin: 5px 10px;
+    }
+
 }
 
 .main-link {
+    
     text-decoration: none;
     color: rgb(0, 79, 224);
+    
+    &:hover {
+        color: rgb(0, 62, 179);
+    }
+
 }
 
 .main-wrap {
     display: flex;
     flex-direction: row;
-}
-
-.main-link:hover {
-    color: rgb(0, 62, 179);
+    height: auto;
 }
 
 #integration-img {
-    width: 25%;
+    width: 33%;
     object-fit: contain;
 }
 
-@media screen and (max-width: 900px) {
+#result {
+    
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
 
-    .main-wrap {
-        flex-direction: column;
+    h1 {
+        text-align: center;
     }
 
-    #integration-img {
-        width: 75%;
-        display: block;
-        margin: 0 auto;
-    }
+}
 
-    nav, #nav-link-wrap {
-        flex-direction: column; 
+form {
+    
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(240, 240, 240);
+    padding: 2em 4em;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 10px;
+    width: 50%;
+    line-height: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-row-gap: 2em;
+    
+    div {
+        margin-left: 2em;
+        margin: 0; 
     }
     
-    #nav-title {
-        display: block;
-        margin: 0 auto;
-    }
+}
 
-    #nav-link-wrap {
-        position: relative !important;
-        width: 100%;
-        right: 0px;
-    }
-
-    .nav-item {
-        display: block;
-        margin: 0 auto;
-    }
-
+input {
+    width: 90%;
+    border: 1px solid rgb(200, 200, 200);
+    height: auto;
+    padding: 2px 4px;
+    margin-right: 2em;
+    margin-left: auto;
 }
 
 footer {
@@ -121,11 +151,243 @@ footer {
 }
 
 .foot-link {
+    
     text-decoration: none;
     color: $link-col;
     padding: 1.25em 2.5em;
     display: block;
     margin: 0 auto;
     text-align: center;
+
+    &:hover {
+        color: darken($link-col, 10%);
+    }
+
 }
 
+.tutorial {
+    line-height: 2em;
+    padding: 2em 4em;
+    width: 60%;
+    margin: 0 auto;
+    
+    h2 {
+        text-align: center;
+    }
+
+}
+
+#calc {
+
+    grid-column: 1 / 4;
+    width: fit-content;
+    padding: 0.5em 2em;
+    font-size: 100%;
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(0, 120, 255);
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+
+    &:hover {
+        animation: calc-hover 0.2s forwards;
+    }
+
+    &:active {
+        color: rgb(225, 225, 225);
+    }
+
+} 
+
+
+
+.underline {
+    text-decoration: underline;
+}
+
+input[type=radio] {
+    
+    background: white;
+    border: 3px solid red;
+    color: $link-col;
+
+    &:hover {
+        color: blue;    
+    }
+
+}
+
+
+
+
+
+input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+}
+
+label {
+    color: #777777;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0px 8px;
+
+    &:hover {
+        color: rgb(25, 25, 25);
+    }
+
+    &:active {
+        color: black;
+    }
+
+}
+
+input[type=radio]:checked {
+
+    color: white !important;
+    background: #c8c8c8 !important;
+
+    label {
+        color: black;
+    }
+
+}
+
+
+
+
+.example {
+    text-align: center;
+}
+
+#radio {
+ 
+    border: solid 1px #c8c8c8;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 90%;
+    margin-right: 4em;
+    padding: 2px 4px;
+    align-items: center;
+    justify-content: center;
+    
+    input {
+        margin: auto !important;
+        width: fit-content;
+    }
+    
+}
+
+
+
+
+
+@keyframes calc-hover {
+    to {
+        background-color: rgb(0, 135, 255);
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+    }  
+}        
+
+@media screen and (max-width: 900px) {
+    
+    .main-wrap {
+        flex-direction: column;
+    }
+    
+    #integration-img {
+        width: 66%;
+        display: block;
+        margin: 0 auto;
+    }    
+    
+    nav, #nav-link-wrap {
+        flex-direction: column; 
+    }    
+    
+    #nav-title {
+        display: block;
+        margin: 0 auto;
+    }    
+    
+    #nav-link-wrap {
+        position: relative !important;
+        width: 100%;
+        right: 0px;
+    }    
+    
+    .nav-item {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    form {
+        
+        grid-row-gap: 1em;
+        width: 75%;
+        grid-template-columns: 1fr 1fr !important;
+        padding: 1em 2em;
+
+        .example {
+            display: none;
+        }
+
+        input {
+            grid-column: 2 / 3;
+        }
+
+        div {
+            grid-column: 1 / 2;
+            margin: 0;
+        }
+
+    }
+
+    .note {
+        max-width: 75% !important;
+    }
+
+    #radio {
+        grid-column: 2 / 3;
+        grid-row: 0 / 1; 
+        width: 50%;
+        margin: 0px !important;
+        width: 90%;
+    }
+    
+    input {
+        width: 100%;
+        margin-left: auto;
+    }
+    
+    .collapsed {
+        display: none !important; 
+    }
+    
+    .uncollapsed {
+        animation: mobile-nav 1s forwards; 
+    } 
+    
+}
+
+@keyframes mobile-nav {
+
+    0% {
+        transform: ScaleY(0);
+        height: 0px; 
+    }
+
+    100% {
+        transform: ScaleY(1);
+        transform-origin: top;
+        height: 325px; 
+    } 
+
+}
