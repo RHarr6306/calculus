@@ -26,7 +26,7 @@ const f = (func, x) => {
         func = func.replace(replacements[l][0], replacements[l][1]);
     }
 
-    func = func.replace(/x/g, String(x));
+    func = func.replace(/x/g, `(${String(x)})`);
     return eval(func);
 
 }
@@ -37,6 +37,8 @@ const lim = (func, c, side=false) => {
 
     limR = Math.round(f(func, c + 0.000001) * 100) / 100;
     limL = Math.round(f(func, c - 0.000001) * 100) / 100;
+
+    alert(limR + " " + limL);
 
     if (side)
         return `${msg}<h1>${(side == 'right') ? limR : limL}</h1>`;
