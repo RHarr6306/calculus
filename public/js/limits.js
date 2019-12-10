@@ -31,24 +31,24 @@ const f = (func, x) => {
 
 }
 
+const checkInfinity = (val, num=(10 ** 6)) => {
+    
+    if (val < -num)
+        return "-Infinity";
+
+    else if (val > num)
+        return "Infinity";
+
+    else return val
+
+}
+
 const lim = (func, c, side=false) => {
 
     const s1 = f(func, c);
 
-    limR = Math.round(f(func, c + (1 / 10 ** 10)) * 100) / 100;
-    limL = Math.round(f(func, c - (1 / 10 ** 10)) * 100) / 100;
-
-    if (limR < -1000000){
-        limR = "-inf";
-    } else if (limR > 1000000){
-        limR = "inf";
-    };
-
-    if (limL < -1000000){
-        limL = "-inf";
-    } else if (limL > 1000000){
-        limL = "inf";
-    };
+    limR = checkInfinity(Math.round(f(func, c + (1 / 10 ** 10)) * 100) / 100);
+    limL = checkInfinity(Math.round(f(func, c - (1 / 10 ** 10)) * 100) / 100);
 
     if (side)
         return `${msg}<h1>${(side == 'right') ? limR : limL}</h1>`;
