@@ -1,6 +1,8 @@
 
 $(document).ready(() => {
 
+    $("#nav-link-wrap").addClass("collapsed");
+
     win = window.width;
     var navClick = 0;
 
