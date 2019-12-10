@@ -38,6 +38,18 @@ const lim = (func, c, side=false) => {
     limR = Math.round(f(func, c + (1 / 10 ** 10)) * 100) / 100;
     limL = Math.round(f(func, c - (1 / 10 ** 10)) * 100) / 100;
 
+    if (limR < -1000000){
+        limR = "-inf";
+    } else if (limR > 1000000){
+        limR = "inf";
+    };
+
+    if (limL < -1000000){
+        limL = "-inf";
+    } else if (limL > 1000000){
+        limL = "inf";
+    };
+
     if (side)
         return `${msg}<h1>${(side == 'right') ? limR : limL}</h1>`;
 
