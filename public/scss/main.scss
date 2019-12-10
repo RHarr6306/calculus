@@ -79,20 +79,20 @@ nav, #nav-link-wrap {
 }
 
 .main-link {
+    
     text-decoration: none;
     color: rgb(0, 79, 224);
-}
-
-.main-wrap {
-
-    display: flex;
-    flex-direction: row;
-    height: auto;
-
+    
     &:hover {
         color: rgb(0, 62, 179);
     }
 
+}
+
+.main-wrap {
+    display: flex;
+    flex-direction: row;
+    height: auto;
 }
 
 #integration-img {
@@ -201,8 +201,6 @@ footer {
 
 } 
 
-
-
 .underline {
     text-decoration: underline;
 }
@@ -218,10 +216,6 @@ input[type=radio] {
     }
 
 }
-
-
-
-
 
 input[type=radio] {
     position: absolute;
@@ -256,9 +250,6 @@ input[type=radio]:checked {
 
 }
 
-
-
-
 .example {
     text-align: center;
 }
@@ -283,10 +274,6 @@ input[type=radio]:checked {
     }
     
 }
-
-
-
-
 
 @keyframes calc-hover {
     to {
@@ -391,3 +378,4 @@ input[type=radio]:checked {
     } 
 
 }
+
