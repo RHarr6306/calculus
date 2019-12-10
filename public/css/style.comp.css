@@ -55,13 +55,13 @@ nav, #nav-link-wrap {
 .main-link {
   text-decoration: none;
   color: #004fe0; }
+  .main-link:hover {
+    color: #003eb3; }
 
 .main-wrap {
   display: flex;
   flex-direction: row;
   height: auto; }
-  .main-wrap:hover {
-    color: #003eb3; }
 
 #integration-img {
   width: 33%;

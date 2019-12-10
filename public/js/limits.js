@@ -26,8 +26,20 @@ const f = (func, x) => {
         func = func.replace(replacements[l][0], replacements[l][1]);
     }
 
-    func = func.replace(/x/g, String(x));
+    func = func.replace(/x/g, `(${String(x)})`);
     return eval(func);
+
+}
+
+const checkInfinity = (val, num=(10 ** 6)) => {
+    
+    if (val < -num)
+        return "-Infinity";
+
+    else if (val > num)
+        return "Infinity";
+
+    else return val
 
 }
 
@@ -35,8 +47,8 @@ const lim = (func, c, side=false) => {
 
     const s1 = f(func, c);
 
-    limR = Math.round(f(func, c + 0.000001) * 100) / 100;
-    limL = Math.round(f(func, c - 0.000001) * 100) / 100;
+    limR = checkInfinity(Math.round(f(func, c + (1 / 10 ** 10)) * 100) / 100);
+    limL = checkInfinity(Math.round(f(func, c - (1 / 10 ** 10)) * 100) / 100);
 
     if (side)
         return `${msg}<h1>${(side == 'right') ? limR : limL}</h1>`;
