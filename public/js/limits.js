@@ -12,6 +12,9 @@ const replacements = [
     ["sin(", "Math.sin("], 
     ["cos(", "Math.cos("],
     ["tan(", "Math.tan("],
+    ["csc(", "1/sin("], 
+    ["sec(", "1/cos("], 
+    ["cot(", "1/tan("],
     ["arcsin(", "Math.asin("],
     ["arccos(", "Math.acos("], 
     ["arctan(", "Math.atan("]
