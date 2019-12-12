@@ -1,17 +1,15 @@
 
 $(document).ready(() => {
 
-    $("#nav-link-wrap").addClass("collapsed");
-
     win = window.width;
     var navClick = 0;
 
     $("#nav-title").on("click", () => {
 
         if (navClick % 2 == 0)
-            $("#nav-link-wrap").removeClass("collapsed").addClass("uncollapsed");
+            $("#nav-link-wrap").addClass("uncollapsed").removeClass("collapsed");
         
-        else $("#nav-link-wrap").removeClass("uncollapsed").addClass("collapsed");
+        else $("#nav-link-wrap").addClass("collapsed").removeClass("uncollapsed");
         navClick += 1;
 
     });

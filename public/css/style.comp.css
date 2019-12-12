@@ -19,6 +19,9 @@ nav, #nav-link-wrap {
   flex-direction: row; }
 
 #nav-link-wrap {
+  transform: ScaleY(0);
+  transform-origin: top;
+  height: 0px;
   position: absolute;
   right: 5%; }
 
@@ -245,9 +248,18 @@ input[type=radio]:checked {
     width: 100%;
     margin-left: auto; }
   .collapsed {
-    display: none !important; }
+    animation: mobile-nav-collapse 0.5s forwards; }
   .uncollapsed {
-    animation: mobile-nav 1s forwards; } }
+    animation: mobile-nav 0.75s forwards; } }
+
+@keyframes mobile-nav-collapse {
+  0% {
+    transform: ScaleY(1);
+    transform-origin: top;
+    height: 325px; }
+  100% {
+    transform: ScaleY(0);
+    height: 0px; } }
 
 @keyframes mobile-nav {
   0% {
