@@ -26,5 +26,5 @@ app.get("/programs", (req, res) => {
     res.sendFile(views + "programs.html")
 })
 
-app.listen(port, () => console.log(`Running on port: ${PORT}`))
+app.listen(PORT, () => console.log(`Running on port: ${PORT}`))
 
