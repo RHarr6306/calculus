@@ -92,7 +92,7 @@ nav, #nav-link-wrap {
 .main-wrap {
     display: flex;
     flex-direction: row;
-    height: auto;
+    height: 600px;
 }
 
 #integration-img {
@@ -148,6 +148,9 @@ footer {
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto;
     background-color: $foot-col;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .foot-link {
