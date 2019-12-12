@@ -32,9 +32,6 @@ nav, #nav-link-wrap {
 }
 
 #nav-link-wrap {
-    transform: ScaleY(0);
-    transform-origin: top;
-    height: 0px;
     position: absolute;
     right: 5%;
 }
@@ -293,6 +290,12 @@ input[type=radio]:checked {
 }        
 
 @media screen and (max-width: 900px) {
+
+    #nav-link-wrap {
+        transform: ScaleY(0);
+        transform-origin: top;
+        height: 0px;
+    }
     
     .main-wrap {
         flex-direction: column;

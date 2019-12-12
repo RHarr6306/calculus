@@ -19,9 +19,6 @@ nav, #nav-link-wrap {
   flex-direction: row; }
 
 #nav-link-wrap {
-  transform: ScaleY(0);
-  transform-origin: top;
-  height: 0px;
   position: absolute;
   right: 5%; }
 
@@ -206,6 +203,10 @@ input[type=radio]:checked {
     transform: scale(1.05); } }
 
 @media screen and (max-width: 900px) {
+  #nav-link-wrap {
+    transform: ScaleY(0);
+    transform-origin: top;
+    height: 0px; }
   .main-wrap {
     flex-direction: column; }
   #integration-img {
