@@ -33,10 +33,10 @@ const f = (func, x) => {
 
 const checkInfinity = (val, num=(10 ** 6)) => {
 
-    if (val > num || val < num)
-        val = (val > num) ? "Infinity" : "-Infinity";
-
-    return val
+    if (val < -num || val > num)
+        return (val < -num) ? "-Infinity" : "Infinity";
+    
+    else return val
 
 }
 

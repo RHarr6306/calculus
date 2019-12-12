@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const port = process.env.PORT || 8080
+const PORT = process.env.PORT || 8080
 
 const views = __dirname + "/public/views/"
 
@@ -26,7 +26,5 @@ app.get("/programs", (req, res) => {
     res.sendFile(views + "programs.html")
 })
 
-app.listen(port, () => {
-    console.log("Running on port: " + port)
-})
+app.listen(PORT, () => console.log(`Running on port: ${PORT}`))
 
