@@ -199,7 +199,21 @@ input[type=radio]:checked {
 .fade-in {
   animation: fade-in 1s forwards; }
 
+.drop-down-icon {
+  display: none; }
+
 @media screen and (max-width: 900px) {
+  .drop-down-icon {
+    width: 10px;
+    height: auto;
+    display: block;
+    filter: invert(1);
+    transform: rotate(90deg);
+    margin-left: 3px; }
+    .drop-down-icon:hover {
+      filter: invert(0.8); }
+  .drop-down-icon-active {
+    animation: drop-down 1s forwards; }
   #nav-link-wrap {
     transform: ScaleY(0);
     transform-origin: top;
@@ -279,3 +293,19 @@ input[type=radio]:checked {
     background-color: #0087ff;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
     transform: scale(1.05); } }
+
+@keyframes drop-down {
+  from {
+    width: 10px;
+    height: auto;
+    display: block;
+    filter: invert(1);
+    margin-left: 3px;
+    transform: rotate(90deg); }
+  to {
+    width: 10px;
+    height: auto;
+    display: block;
+    filter: invert(1);
+    margin-left: 3px;
+    transform: rotate(0deg); } }

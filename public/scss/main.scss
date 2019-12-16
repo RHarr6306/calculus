@@ -285,8 +285,32 @@ input[type=radio]:checked {
     animation: fade-in 1s forwards;
 }
 
+.drop-down-icon {
+    display: none;
+}
+
 @media screen and (max-width: 900px) {
 
+    .drop-down-icon {
+       
+        width: 10px;
+        height: auto;
+        display: block;
+        filter: invert(1);
+        transform: rotate(90deg);
+        margin-left: 3px;
+
+        &:hover {
+            filter: invert(0.8);
+        }
+
+    }
+
+    .drop-down-icon-active {
+        animation: drop-down 1s forwards;
+    }
+
+    
     #nav-link-wrap {
         transform: ScaleY(0);
         transform-origin: top;
@@ -333,16 +357,16 @@ input[type=radio]:checked {
         .example {
             display: none;
         }
-
+        
         input {
             grid-column: 2 / 3;
         }
-
+        
         div {
             grid-column: 1 / 2;
             margin: 0;
         }
-
+        
     }
 
     .note {
@@ -379,7 +403,7 @@ input[type=radio]:checked {
         transform-origin: top;
         height: 325px; 
     }
-
+    
     100% {
         transform: ScaleY(0);
         height: 0px;
@@ -388,7 +412,7 @@ input[type=radio]:checked {
 }
 
 @keyframes mobile-nav {
-
+    
     0% {
         transform: ScaleY(0);
         height: 0px; 
@@ -406,12 +430,12 @@ input[type=radio]:checked {
     
     from {
         opacity: 0;
-
+        
     }
     to {
         opacity: 1;
     }
-
+    
 }
 
 @keyframes calc-hover {
@@ -421,4 +445,23 @@ input[type=radio]:checked {
         transform: scale(1.05);
     }  
 }        
+
+@keyframes drop-down {
+    from {
+        width: 10px;
+        height: auto;
+        display: block;
+        filter: invert(1);
+        margin-left: 3px;
+        transform: rotate(90deg);
+    }
+    to {
+        width: 10px;
+        height: auto;
+        display: block;
+        filter: invert(1);
+        margin-left: 3px;
+        transform: rotate(0deg);
+    }
+}
 

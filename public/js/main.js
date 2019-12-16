@@ -30,5 +30,18 @@ $(document).ready(() => {
 
     });
 
+    $("#nav-title > .nav-link").click(() => {
+        
+        if (navClick % 2 == 0) {
+            $(".drop-down-icon")
+                .addClass("drop-down-icon-active")
+                .removeClass("drop-down-icon");
+        } else {
+            $(".drop-down-icon")
+                .removeClass("drop-down-icon-active")
+                .addClass("drop-down-icon");
+        }
+    })
+
 });
 
