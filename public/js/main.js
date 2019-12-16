@@ -31,18 +31,16 @@ $(document).ready(() => {
     });
 
     $("#nav-title").click(() => {
-        
-        if (navClick % 2 == 1) {
-            $(".drop-down-icon")
-                .addClass("drop-down-icon-active")
-                .removeClass("drop-down-icon");
-        } else {
-            $(".drop-down-icon")
-                .rotate(90)
-                .addClass("drop-down-icon")
-                .removeClass("drop-down-icon-active");
-        }
-    })
+
+        (navClick % 2 == 1) ? $(".drop-down-icon")
+            .addClass("drop-down-icon-active")
+            .removeClass("drop-down-icon") 
+        : $(".drop-down-icon")
+            .rotate(90)
+            .addClass("drop-down-icon")
+            .removeClass("drop-down-icon-active");
+
+    });
 
 });
 
