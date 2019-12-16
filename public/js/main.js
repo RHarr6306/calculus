@@ -39,8 +39,8 @@ $(document).ready(() => {
         } else {
             $(".drop-down-icon")
                 .rotate(90)
-                .removeClass("drop-down-icon-active")
-                .addClass("drop-down-icon");
+                .addClass("drop-down-icon")
+                .removeClass("drop-down-icon-active");
         }
     })
 

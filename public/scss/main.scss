@@ -285,18 +285,23 @@ input[type=radio]:checked {
     animation: fade-in 1s forwards;
 }
 
-.drop-down-icon {
-    display: none !important;
+@media screen and (min-width: 950px) {
+
+    .drop-down-icon {
+        display: none !important;
+    }
+
 }
 
-.drop-down-icon-active {
-    display: none !important;
-}
-
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
+    
+    .drop-down-icon-active {
+        display: inline-block;
+    }
 
     .drop-down-icon {
        
+        display: inline-block !important;
         width: 10px;
         height: auto;
         display: block;
@@ -452,14 +457,16 @@ input[type=radio]:checked {
 
 @keyframes drop-down {
     from {
+        display: block !important;
         width: 10px;
         height: auto;
         display: block;
         filter: invert(1);
-        margin-left: 3px;
         transform: rotate(90deg);
+        margin-left: 3px;
     }
     to {
+        display: block !important;
         width: 10px;
         height: auto;
         display: block;
