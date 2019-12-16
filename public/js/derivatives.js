@@ -48,6 +48,8 @@ const lim = (func, c, side=false) => {
 
     const s1 = f(func, c);
 
+    alert(s1)
+
     limR = checkInfinity(Math.round(f(func, c + (1 / 10 ** 10)) * 100) / 100);
     limL = checkInfinity(Math.round(f(func, c - (1 / 10 ** 10)) * 100) / 100);
 
@@ -61,10 +63,30 @@ const lim = (func, c, side=false) => {
    
 }
 
+const diffQuotient = (func, x, dx) => {
+
+    const s1 = f(func, x)
+
+    alert(s1)
+
+    // [f(dx + x) - f(x)]/dx
+    const r = Math.round((f(func, x + dx) - f(func, x)) / dx);
+    const l = Math.round((f(func, x - dx) - f(func, x)) / -dx);
+    
+    if (r == l)
+        return `<h1>${(s1 == r) ? l : 'DNE'}</h1>`;
+
+    else return `<h1>DNE</h1>`
+
+}
 
 $("#calc").click(() => {
     
-    // handle derivative
+    const x = $("#diff-x").val();
+    const func = $("#diff-f").val();
+    const msg = "Calculating <b>lim_[dx->x]((f(x+dx)-f(x))/dx)</b>... ";
+
+    $("#result").html(`${msg} ${diffQuotient(func, parseInt(x), (1 / 10 ** 10))}`)
 
 });
 
