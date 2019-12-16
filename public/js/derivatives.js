@@ -67,12 +67,10 @@ const diffQuotient = (func, x, dx) => {
 
     const s1 = f(func, x)
 
-    alert(s1)
-
     // [f(dx + x) - f(x)]/dx
     const r = Math.round((f(func, x + dx) - f(func, x)) / dx);
     const l = Math.round((f(func, x - dx) - f(func, x)) / -dx);
-    
+
     if (r == l)
         return `<h1>${(s1 == r) ? l : 'DNE'}</h1>`;
 
