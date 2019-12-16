@@ -65,14 +65,12 @@ const lim = (func, c, side=false) => {
 
 const diffQuotient = (func, x, dx) => {
 
-    const s1 = f(func, x)
-
     // [f(dx + x) - f(x)]/dx
     const r = Math.round((f(func, x + dx) - f(func, x)) / dx);
     const l = Math.round((f(func, x - dx) - f(func, x)) / -dx);
-
+    
     if (r == l)
-        return `<h1>${(s1 == r) ? l : 'DNE'}</h1>`;
+        return `<h1>${l}</h1>`;
 
     else return `<h1>DNE</h1>`
 
