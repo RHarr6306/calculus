@@ -30,14 +30,15 @@ $(document).ready(() => {
 
     });
 
-    $("#nav-title > .nav-link").click(() => {
+    $("#nav-title").click(() => {
         
-        if (navClick % 2 == 0) {
+        if (navClick % 2 == 1) {
             $(".drop-down-icon")
                 .addClass("drop-down-icon-active")
                 .removeClass("drop-down-icon");
         } else {
             $(".drop-down-icon")
+                .rotate(90)
                 .removeClass("drop-down-icon-active")
                 .addClass("drop-down-icon");
         }

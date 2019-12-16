@@ -286,7 +286,11 @@ input[type=radio]:checked {
 }
 
 .drop-down-icon {
-    display: none;
+    display: none !important;
+}
+
+.drop-down-icon-active {
+    display: none !important;
 }
 
 @media screen and (max-width: 900px) {

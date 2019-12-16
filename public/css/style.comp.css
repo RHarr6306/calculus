@@ -200,7 +200,10 @@ input[type=radio]:checked {
   animation: fade-in 1s forwards; }
 
 .drop-down-icon {
-  display: none; }
+  display: none !important; }
+
+.drop-down-icon-active {
+  display: none !important; }
 
 @media screen and (max-width: 900px) {
   .drop-down-icon {
