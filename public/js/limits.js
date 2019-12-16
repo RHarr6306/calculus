@@ -50,9 +50,9 @@ const lim = (func, c, side=false) => {
         return `${msg}<h1>${(side == 'right') ? limR : limL}</h1>`;
 
     else if (limR == limL)
-        return `${msg}<h1>${(s1 == limR) ? s1 : 'DNE'}</h1`;
+        return `${msg}<h1>${(s1 == limR) ? s1 : 'DNE'}</h1>`;
 
-    else return `${msg}<h1>DNE</h1`
+    else return `${msg}<h1>DNE</h1>`
    
 }
 
