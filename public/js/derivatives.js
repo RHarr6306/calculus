@@ -11,6 +11,7 @@ slope & f'(x)
 
 */
 
+
 const replacements = [
     ["^", "**"], 
     ["sin(", "Math.sin("], 
@@ -21,11 +22,13 @@ const replacements = [
     ["arctan(", "Math.atan("]
 ]
 
+// JavaScript Math does not support trigonometric functions such as
+// csc(x), cot(x), arcsec(x), etc.
+
 const f = (func, x) => {
 
-    for (l in replacements) {
+    for (l in replacements)
         func = func.replace(replacements[l][0], replacements[l][1]);
-    }
 
     func = func.replace(/x/g, `(${String(x)})`);
     return eval(func);
@@ -33,13 +36,10 @@ const f = (func, x) => {
 }
 
 const checkInfinity = (val, num=(10 ** 6)) => {
+
+    if (val < -num || val > num)
+        return (val < -num) ? "-Infinity" : "Infinity";
     
-    if (val < -num)
-        return "-Infinity";
-
-    else if (val > num)
-        return "Infinity";
-
     else return val
 
 }
@@ -60,6 +60,7 @@ const lim = (func, c, side=false) => {
     else return `${msg}<h1>DNE</h1`
    
 }
+
 
 $("#calc").click(() => {
     
