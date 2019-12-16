@@ -82,7 +82,8 @@ $("#calc").click(() => {
     const func = $("#diff-f").val();
     const msg = "Calculating <b>lim_[dx->x]((f(x+dx)-f(x))/dx)</b>... ";
 
-    $("#result").html(`${msg} ${diffQuotient(func, parseInt(x), (1 / 10 ** 10))}`)
+    $("#result").html(`${msg} ${diffQuotient(func, parseInt(x), (1 / 10 ** 10))}`);
+    $("#result").addClass("fade-in");
 
 });
 

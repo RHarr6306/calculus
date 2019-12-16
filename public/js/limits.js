@@ -71,5 +71,7 @@ $("#calc").click(() => {
     
     else $("#result").html(lim(func, c));
 
+    $("#result").addClass("fade-in");
+
 });
 
