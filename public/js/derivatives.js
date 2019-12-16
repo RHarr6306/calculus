@@ -68,9 +68,9 @@ const diffQuotient = (func, x, dx) => {
     // [f(dx + x) - f(x)]/dx
     const r = Math.round((f(func, x + dx) - f(func, x)) / dx);
     const l = Math.round((f(func, x - dx) - f(func, x)) / -dx);
-    
+
     if (r == l)
-        return `<h1>${l}</h1>`;
+        return `<br>The slope of <b>f(x)</b> at <b>${x}</b> or <b>f'(${x})</b> is: <h1>${l}</h1>`;
 
     else return `<h1>DNE</h1>`
 
