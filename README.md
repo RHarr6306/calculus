@@ -1,4 +1,7 @@
 # Calculus
+![](https://img.shields.io/badge/build-passing-green/?style=flat-square)
+![](https://img.shields.io/github/repo-size/Le-SirH/calculus?style=flat-square)
+![](https://img.shields.io/github/issues/Le-SirH/calculus?style=flat-square)
 
 A Calculus based website for downloading calculus related calculator programs & other miscellaneous programs.
 
