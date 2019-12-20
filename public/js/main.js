@@ -19,14 +19,12 @@ $(document).ready(() => {
         $("#radio>label").css({
             color: '#777777', 
             fontWeight: 'normal'
-        });
+        }).prop('checked', true);
+        
         $(this).css({
             color: 'black', 
             fontWeight: 'bold'
-        });
-        
-        $("#radio>label").prop('checked', true);
-        $(this).prop('checked', true);
+        }).prop('checked', true);
 
     });
 
