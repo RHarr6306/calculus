@@ -19,7 +19,8 @@ const replacements = [
     ["tan(", "Math.tan("],
     ["arcsin(", "Math.asin("],
     ["arccos(", "Math.acos("], 
-    ["arctan(", "Math.atan("]
+    ["arctan(", "Math.atan("], 
+    ["pi", "3.1415926535"]
 ]
 
 // JavaScript Math does not support trigonometric functions such as
