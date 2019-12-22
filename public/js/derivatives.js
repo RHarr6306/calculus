@@ -20,7 +20,7 @@ const replacements = [
     ["arcsin(", "Math.asin("],
     ["arccos(", "Math.acos("], 
     ["arctan(", "Math.atan("], 
-    ["pi", "3.1415926535"]
+    ["pi", "3.1415926"]
 ]
 
 // JavaScript Math does not support trigonometric functions such as
