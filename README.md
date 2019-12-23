@@ -4,7 +4,7 @@
 ![](https://img.shields.io/github/issues/Le-SirH/calculus?style=flat-square)
 ![](https://img.shields.io/github/v/release/Le-SirH/calculus?include_prereleases&style=flat-square)
 
-A Calculus based website for downloading calculus related calculator programs & other miscellaneous programs.
+A Calculus based website for calculating limits, derivatives, integrals, and more! There are also calculus related calculator programs & other miscellaneous programs.
 
 ![](https://i.imgur.com/GX6qZfa.png)
 
