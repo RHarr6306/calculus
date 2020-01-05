@@ -2,67 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=0.7, maximum-scale=1.0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/style.comp.css">
-    <title>Calculus - Limits</title>
+    <link rel="stylesheet" type="text/css" href="./../css/style.comp.css">
+    <link rel="icon" href="./../assets/icon.png">
+    <title>Calculus</title>
 </head>
 <body>
     <nav>
         <div id="nav-title">
-            <a class="nav-link" href="/">Calculus</a>
+            <a class="nav-link">Calculus</a>
+            <img class="drop-down-icon" src="../assets/dropdown-icon.png" style="display:inline-block;">
         </div>
-        <div id="nav-link-wrap">
+        <div id="nav-link-wrap" class="collapsed">
             <div class="nav-item">
-                <a class="nav-link" href="/limits">Limits</a>
+                <a class="nav-link" href="../index.html">Home</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="/derivatives">Derivatives</a>
+                <a class="nav-link" href="limits.html">Limits</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="/integrals">Integrals</a>
+                <a class="nav-link" href="derivatives.html">Derivatives</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="/programs">Programs</a>
+                <a class="nav-link" href="integrals.html">Integrals</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="programs.html">Programs</a>
             </div>
         </div>
     </nav>
     <main>
         <h1>Limits</h1>
+        <hr><br>
         <form>
+            <div>Limit Type:</div>
+            <div id="radio">
+                <label>
+                    Left<input type="radio" id="right" name="limit-type">
+                </label>
+                <label>
+                    Right<input type="radio" id="left" name="limit-type">
+                </label>
+                <label>
+                    Both<input type="radio" id="both" name="limit-type">
+                </label>
+
+            </div>
+            <div class="example">lim_[x -> c^<b class="underline">+</b>](f(x))</div>
             <div>X Approaches:</div> 
             <input type="text" name="x" placeholder="Example: 3.5" id="limit-x">
+            <div class="example">lim_[x -> <b class="underline">c</b>](...)</div>
             <div>Function of X: </div>
-            <input type="text" name="function" placeholder="Example: 3(x^2)-2" id="limit-f">
+            <input type="text" name="function" placeholder="Example: 3*(x^2)-2" id="limit-f">
+            <div class="example">lim_[x -> c](<b class="underline">f(x)</b>)</div>
             <button id="calc" type="button">Calculate</button>
             <div id="result"></div>
         </form>
-        <div class="note" style="padding:1em 2em;display:block;margin:2% auto;max-width:50%;">
-            NOTE: Leave out all spaces in your function and be sure to use parenthesis to avoid misconceptions.
+        <div class="note">
+            <h4 style="margin:8px 0px;text-decoration:underline;">Note</h4>
+            <div>
+                Use <b>*</b> for multiplication. 
+                For example, use <b>3*x</b> instead of <b>3x</b> or <b>3(x)</b>.
+                Odd results may occur otherwise. Be sure to use parenthesis in trigonometric functions 
+                as well.
+            </div>
+        </div>
+        <div class="tutorial">
+            <h2>Evaluating Limits</h2>
+            <ol>
+                <li>f(x) is defined at c</li>
+                <li>The limit of f(x) at c exists</li>
+                <li>f(c) = lim_[x->c](f(c))</li>
+            </ol>
         </div>
     </main>
     <footer>
         <div class="foot-item">
-            <a class="foot-link" href="/">Home</a>
+            <a class="foot-link" href="../index.html">Home</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/limits">Limits</a>
+            <a class="foot-link" href="limits.html">Limits</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/derivatives">Derivatives</a>
+            <a class="foot-link" href="derivatives.html">Derivatives</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/integrals">Integrals</a>
+            <a class="foot-link" href="integrals.html">Integrals</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/programs">Programs</a>
+            <a class="foot-link" href="programs.html">Programs</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="http://livepond.net" target="_blank">LivePond</a>
+            <a class="foot-link" href="https://github.com/Le-SirH/calculus" target="_blank">GitHub</a>
         </div>
     </footer>
     <script type="text/javascript"></script>
     <script type="text/javascript" src="./../js/limits.js"></script>
+    <script type="text/javascript" src="./../js/main.js"></script>
 </body>
 </html>

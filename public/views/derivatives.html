@@ -2,56 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=0.7, maximum-scale=1.0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/style.comp.css">
-    <title>Calculus - Derivatives</title>
+    <link rel="stylesheet" type="text/css" href="./../css/style.comp.css">
+    <link rel="icon" href="./../assets/icon.png">
+    <title>Calculus</title>
 </head>
 <body>
     <nav>
         <div id="nav-title">
-            <a class="nav-link" href="/">Calculus</a>
+            <a class="nav-link">Calculus</a>
+            <img class="drop-down-icon" src="../assets/dropdown-icon.png" style="display:inline-block;">
         </div>
         <div id="nav-link-wrap">
             <div class="nav-item">
-                <a class="nav-link" href="/limits">Limits</a>
+                <a class="nav-link" href="../index.html">Home</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="/derivatives">Derivatives</a>
+                <a class="nav-link" href="limits.html">Limits</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="/integrals">Integrals</a>
+                <a class="nav-link" href="derivatives.html">Derivatives</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="/programs">Programs</a>
+                <a class="nav-link" href="integrals.html">Integrals</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="programs.html">Programs</a>
             </div>
         </div>
     </nav>
     <main>
         <h1>Differentiation</h1>
-        <p>Coming soon!</p>
+        <hr><br>
+        <form>
+            <div>Variable (x):</div> 
+            <input type="text" name="x" placeholder="Example: 3.5" id="diff-x">
+            <div class="example">f(<b class="underline">x</b>)</div>
+            <div>Function:</div>
+            <input type="text" name="function" placeholder="Example: 3*(x^2)-2" id="diff-f">
+            <div class="example"><b class="underline">f(x)</b></div>
+            <button id="calc" type="button">Calculate</button>
+            <div id="result"></div>
+        </form>
+        <div class="note">
+            <h4 style="margin:8px 0px;text-decoration:underline;">Note</h4>
+            <div>
+                Use <b>*</b> for multiplication. 
+                For example, use <b>3*x</b> instead of <b>3x</b> or <b>3(x)</b>.
+                Odd results may occur otherwise. Be sure to use parenthesis in trigonometric functions 
+                as well.
+            </div>
+        </div>
+        <div class="tutorial">
+            <h2>Evaluating Derivatives</h2>
+            <ol>
+                <li><b>f(x)</b> is continuous.</li>
+                <li><b>lim_[dx -> x]((f(x + dx) - f(x)) / dx</b></li>
+            </ol>
+        </div>
     </main>
     <footer>
         <div class="foot-item">
-            <a class="foot-link" href="/">Home</a>
+            <a class="foot-link" href="../../index.html">Home</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/limits">Limits</a>
+            <a class="foot-link" href="limits.html">Limits</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/derivatives">Derivatives</a>
+            <a class="foot-link" href="derivatives.html">Derivatives</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/integrals">Integrals</a>
+            <a class="foot-link" href="integrals.html">Integrals</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/programs">Programs</a>
+            <a class="foot-link" href="programs.html">Programs</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="http://livepond.net" target="_blank">LivePond</a>
+            <a class="foot-link" href="https://github.com/Le-SirH/calculus" target="_blank">GitHub</a>
         </div>
     </footer>
     <script type="text/javascript"></script>
+    <script type="text/javascript" src="./../js/main.js"></script>
+    <script type="text/javascript" src="./../js/derivatives.js"></script>
 </body>
 </html>

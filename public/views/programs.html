@@ -2,35 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=0.7, maximum-scale=1.0" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./../css/style.comp.css">
+    <link rel="icon" href="./../assets/icon.png">
     <title>Calculus</title>
 </head>
-<!--PGP Test :D-->
 <body>
     <nav>
         <div id="nav-title">
-            <a class="nav-link" href="/">Calculus</a>
+            <a class="nav-link">Calculus</a>
+            <img class="drop-down-icon" src="../assets/dropdown-icon.png" style="display:inline-block;">
         </div>
         <div id="nav-link-wrap">
             <div class="nav-item">
-                <a class="nav-link" href="/limits">Limits</a>
+                <a class="nav-link" href="../index.html">Home</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="/derivatives">Derivatives</a>
+                <a class="nav-link" href="limits.html">Limits</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="/integrals">Integrals</a>
+                <a class="nav-link" href="derivatives.html">Derivatives</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="/programs">Programs</a>
+                <a class="nav-link" href="integrals.html">Integrals</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="programs.html">Programs</a>
             </div>
         </div>
     </nav>
     <main>
         <h1>Programs</h1>
+        <hr><br>
+        <h2>Installation</h2>
+        <ol>
+            <li>Make sure you have a calculator that is compatible with downloading programs. A TI-83 and above should be fine.</li>
+            <li>Click on a link to download a program.</li>
+            <li>If the program has a <b>.py</b> extension, you may run it from there by double clicking the program.</li>
+            <li>If it is a calculator program, make sure your calculator is plugged in to your computer.</li>
+            <li>
+                Download the 
+                <a class="main-link" href="https://education.ti.com/en/products/computer-software/ti-connect-ce-sw">TI Connect CE Software</a> 
+                and follow their steps to receive the program on your calculator.
+            </li>
+        </ol>
         <h2>TI Basic</h2>
         <p>(You will need <a class="main-link" href="https://education.ti.com/en/products/computer-software/ti-connect-ce-sw">Ti-Connect CE</a> in order to install these programs.)</p>
         <h4>Formulas / Theorems</h4>
@@ -52,29 +69,31 @@
         <h2>Python</h2>
         <p>(You must have Python and the required packages installed in order to run these programs.)</p>
         <ul>
-            <li><a class="main-link" href="../programs/fractals.py">Fractal Rendering Script</a></li>
+            <li><a class="main-link" href="https://github.com/Dapp3rDuck/fractals">Fractal Rendering Script</a></li>
         </ul>
     </main>
     <footer>
         <div class="foot-item">
-            <a class="foot-link" href="/">Home</a>
+            <a class="foot-link" href="../index.html">Home</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/limits">Limits</a>
+            <a class="foot-link" href="limits.html">Limits</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/derivatives">Derivatives</a>
+            <a class="foot-link" href="derivatives.html">Derivatives</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/integrals">Integrals</a>
+            <a class="foot-link" href="integrals.html">Integrals</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/programs">Programs</a>
+            <a class="foot-link" href="programs.html">Programs</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="http://livepond.net" target="_blank">LivePond</a>
+            <a class="foot-link" href="https://github.com/Le-SirH/calculus" target="_blank">GitHub</a>
         </div>
     </footer>
     <script type="text/javascript"></script>
+    <script type="text/javascript" src="./../js/main.js"></script>
 </body>
 </html>
+

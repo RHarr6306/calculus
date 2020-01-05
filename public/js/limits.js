@@ -1,66 +1,81 @@
-// limit calculator
 
 /*
 
-    __Input__
-    x => ?
-    f(x) = ?
-
-    __Output__
-    limit value or DNE
-    
-    __Steps__
     1. f(x) is defined at c
     2. the limit exists at f(c)
     3. f(c) = lim_[x->c]f(c)
     
 */
 
+const replacements = [
+    ["^", "**"], 
+    ["sin(", "Math.sin("], 
+    ["cos(", "Math.cos("],
+    ["tan(", "Math.tan("],
+    ["csc(", "1/sin("], 
+    ["sec(", "1/cos("], 
+    ["cot(", "1/tan("],
+    ["arcsin(", "Math.asin("],
+    ["arccos(", "Math.acos("], 
+    ["arctan(", "Math.atan("], 
+    ["pi", "3.1415926535"]
+]
+
+// JavaScript Math does not support trigonometric functions such as
+// csc(x), cot(x), arcsec(x), etc.
+
 const f = (func, x) => {
 
+    for (l in replacements)
+        func = func.replace(replacements[l][0], replacements[l][1]);
 
-    func = func.replace(/\^/g, "**");
-    func = func.replace(/\(/g, "*(");
-    func = func.replace(/\/\*\(/g, "/\(");
-    func = func.replace(/x/g, String(x));
-    // cleanup? 
-    // More replace functions may be needed.
-
-    if (eval(func))
-        return eval(func);
-    
-    else return "DNE";
+    func = func.replace(/x/g, `(${String(x)})`);
+    return eval(func);
 
 }
 
+const checkInfinity = (val, num=(10 ** 6)) => {
 
-const evaluate = (func, c) => {
-
-    msg = "Calculating <b>lim_[x -> " + c + "] " + func + "</b>... ";
-    $("#result").html(msg);
+    if (val < -num || val > num)
+        return (val < -num) ? "-Infinity" : "Infinity";
     
-    const s1 = f(func, c);
-    var s2 = "DNE";
+    else return val
 
-    limR = Math.round(f(func, c + 0.01));
-    limL = Math.round(f(func, c - 0.01));
+}
 
-    if (limR === limL)
-        s2 = limR;
+const lim = (func, c, side=false) => {
 
-    if (s1 == s2)
-        $("#result").html(msg + "<h1>" + s1 + "</h1>");
+    const s1 = Math.round(f(func, c) * 100) / 100;
 
-    else $("#result").html(msg + "DNE");
+    limR = checkInfinity(Math.round(f(func, c + (1 / 10 ** 5)) * 100) / 100);
+    limL = checkInfinity(Math.round(f(func, c - (1 / 10 ** 5)) * 100) / 100);
 
+    if (side)
+        return `${msg}<h1>${(side == 'right') ? limR : limL}</h1>`;
+
+    else if (limR == limL)
+        return `${msg}<h1>${(s1 == limR) ? s1 : 'DNE'}</h1>`;
+
+    else return `${msg}<h1>DNE</h1>`
+   
 }
 
 $("#calc").click(() => {
-
+    
     const c = parseFloat($("#limit-x").val());
-    const f = $("#limit-f").val();
+    const func = $("#limit-f").val();
+    const right = ($("input[type=radio]#right").is(":checked")) ? 'right' : false;
+    const left = ($("input[type=radio]#left").is(":checked")) ? 'left' : false;
 
-    evaluate(f.replace(/\s+/g, ' '), c);
+    msg = `Calculating <b>lim_[x -> ${c}] ${func}</b>... `;
+    $("#result").html(msg);
+    
+    if (right || left)
+        $("#result").html(lim(func, c, (right) ? 'right' : 'left'));
+    
+    else $("#result").html(lim(func, c));
+
+    $("#result").addClass("fade-in");
 
 });
 

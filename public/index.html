@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./../css/style.comp.css">
-    <title>Calculus</title>
-</head>
-<!--PGP Test :D-->
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=0.7, maximum-scale=1.0" name="viewport" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/style.comp.css">
+        <link rel="icon" href="./../assets/icon.png">
+        <title>Calculus</title>
+    </head>
 <body>
     <nav>
         <div id="nav-title">
-            <a class="nav-link" href="/">Calculus</a>
+            <a class="nav-link">Calculus</a>
+            <img class="drop-down-icon" src="./assets/dropdown-icon.png" style="display:inline-block;">
         </div>
         <div id="nav-link-wrap">
             <div class="nav-item">
-                <a class="nav-link" href="/limits">Limits</a>
+                <a class="nav-link" href="index.html">Home</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="/derivatives">Derivatives</a>
+                <a class="nav-link" href="views/limits.html">Limits</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="/integrals">Integrals</a>
+                <a class="nav-link" href="views/derivatives.html">Derivatives</a>
             </div>
             <div class="nav-item">
-                <a class="nav-link" href="/programs">Programs</a>
+                <a class="nav-link" href="views/integrals.html">Integrals</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link" href="views/programs.html">Programs</a>
             </div>
         </div>
     </nav>
@@ -36,19 +40,19 @@
                 <p class="indent">
                     Welcome to the Calc-ulator! Here, you may play around with the set of 
                     calculus calculators such as our 
-                    <a class="main-link" href="/limits">limit</a>, 
-                    <a class="main-link" href="/derivatives">differentiation</a>, & 
-                    <a class="main-link" href="/integrals">integration</a> 
+                    <a class="main-link" href="views/limits.html">limit</a>, 
+                    <a class="main-link" href="views/derivatives.html">differentiation</a>, & 
+                    <a class="main-link" href="views/integrals.html">integration</a> 
                     calculators! Additionally, we have other 
-                    <a class="main-link" href="/programs">miscellaneous programs</a> to help 
+                    <a class="main-link" href="views/programs.html">miscellaneous programs</a> to help 
                     you while studying, working on homework, or you've finished your AP exam 
                     and are in need of a quick game of minesweeper!
                 </p>
                 <p class="indent">
                     These online calculators are for answer checking and quick estimation. 
-                    Know that these are simple calculators and are not accurate for all function cases; 
-                    they are recommended for use during early chapters of practice. 
-                    Lastly, if there are any issues with the calculators themselves, please let us know 
+                    Remember that they are not 100% accurate and may return incorrect answers
+                    if large number outputs are expected. 
+                    If there are any issues with the calculators themselves, please let us know 
                     <a class="main-link" href="https://forms.gle/mnePzsSYV9ST17C57">here</a>. 
                 </p>
             </div>
@@ -56,39 +60,37 @@
             <img id="integration-img" 
                 src="https://d18l82el6cdm1i.cloudfront.net/solvable/cd1eead886.e2250542ea.eYmrfN.png">
         </div>
-        <h2>Limits</h2>
-        <p>
-            
-        </p>
-        <h2>Differentiation</h2>
-        <p>
+        <h1>Other Calculators</h1>
+        <ul>
+            <li>
 
-        </p>
-        <h2>Integration</h2>
-        <p>
-
-        </p>
+                <a class="main-link" href="./views/sigmas.html"><h3>Sigmas</h3></a>
+            </li>
+            <li>
+                <a class="main-link" href="./views/extrema.html"><h3>Extrema</h3></a>
+            </li>
+        </ul>
     </main>
     <footer>
         <div class="foot-item">
-            <a class="foot-link" href="/">Home</a>
+            <a class="foot-link" href="index.html">Home</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/limits">Limits</a>
+            <a class="foot-link" href="views/limits.html">Limits</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/derivatives">Derivatives</a>
+            <a class="foot-link" href="views/derivatives.html">Derivatives</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/integrals">Integrals</a>
+            <a class="foot-link" href="views/integrals.html">Integrals</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="/programs">Programs</a>
+            <a class="foot-link" href="views/programs.html">Programs</a>
         </div>
         <div class="foot-item">
-            <a class="foot-link" href="http://livepond.net" target="_blank">LivePond</a>
+            <a class="foot-link" href="https://github.com/Le-SirH/calculus" target="_blank">GitHub</a>
         </div>
     </footer>
-    <script type="text/javascript"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
